@@ -9,7 +9,18 @@ The `rotate_word` function solves this problem by taking advantage of slicing in
 ```
 text[1:]
 ```
-Because Python strings 
+
+Because Python strings can't be changed in place, taking out the first letter using index proved to be an effective operation that does not produce any changes with the original word.
+
+```
+text[0]
+```
+
+Using the addition operator, allows for the picked off first character to be placed right back on the end of the sliced string. This produces a rotated word in one line. 
+
+```
+return text[1:] + text[0]
+```
 
 # Problem 2: Username Builder
 Create a function that accepts two strings, first_name and last_name, converts all letters to lowercase, removes all spaces from both the first and last names, and joins the processed names using a single period.
