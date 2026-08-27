@@ -25,5 +25,22 @@ return text[1:] + text[0]
 # Problem 2: Username Builder
 Create a function that accepts two strings, first_name and last_name, converts all letters to lowercase, removes all spaces from both the first and last names, and joins the processed names using a single period.
 
+The `make_username` function creates the final username by applying operations one right after the other. Going from left to right, we first make all the letters into lowercase.
+
+```
+.lower()
+```
+Because the first step returns a string, it is possible to immediately follow up with `.replace()` because it hunts down and removes all the spaces found in the text. This is particularly useful in collapsing multi-word inputs such as "De Leon".
+
+```
+.replace(" ", "")
+```
+
+The same process is applied to both the first and last names, and to polish it further, a period string is added between them to join the final username together.
+
+```
+return first_name.lower().replace(" ", "") + "." + last_name.lower().replace(" ", "")
+```
+
 # Problem 3: Bookend Swap Problem
 Create a function that accepts a list containing at least two elements and unpacks it into three variables—first for the first element, middle for a list containing everything between the first and last elements, and last for the last element—to return a new list without modifying the input list, in which the first and last elements have exchanged positions and the elements in middle remain in their original order.
