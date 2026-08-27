@@ -44,3 +44,15 @@ return first_name.lower().replace(" ", "") + "." + last_name.lower().replace(" "
 
 # Problem 3: Bookend Swap Problem
 Create a function that accepts a list containing at least two elements and unpacks it into three variables—first for the first element, middle for a list containing everything between the first and last elements, and last for the last element—to return a new list without modifying the input list, in which the first and last elements have exchanged positions and the elements in middle remain in their original order.
+
+The `swap_bookend` function uses Python's extended sequence unpacking to separate the list into the parts needed. With this approach, Python automatically decides that the first item falls under the `first` variable, the last item under `last,` and immediately groups everything into the `middle` variable.
+
+```
+first, *middle, last = items
+```
+
+To obtain the final part of the solution, a new list is created in which `last` sits at the front and `first` at the back. The asterisk is needed one more time so the middle items sit properly between the swapped ends without extra brackets showing up. 
+
+```
+return [last, *middle, first]
+```
