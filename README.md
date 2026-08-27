@@ -4,9 +4,11 @@ Milan, Rye Keane Lorenzo | 2ECE-D
 # Problem 1: Word Rotation Problem
 Create a function that accepts a non-empty string. Move the first character of the string to the end while keeping all remaining characters in their original order. Preserve the capitalization of every character.
 
-The 'rotate_word' function solves this problem by taking advantage of slicing in Python. Instead of using a loop to deal with moving the letters one by one, every letter starting from the second character until the end can be grabbed instead. 
+The `rotate_word` function solves this problem by taking advantage of slicing in Python. Instead of using a loop to deal with moving the letters one by one, every letter starting from the second character until the end can be grabbed instead. 
 
-'''text[1:]'''
+```
+text[1:]
+```
 Because Python strings 
 
 # Problem 2: Username Builder
